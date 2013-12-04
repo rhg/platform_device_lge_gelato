@@ -1,6 +1,10 @@
 # Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+PRODUCT_COPY_FILES := \
+	device/lge/gelato/ueventd.gelato.rc:root/ueventd.gelato.rc \
+	device/lge/gelato/recovery.fstab:root/etc/recovery.fstab
+
 # p500 off-mode charging
 #PRODUCT_COPY_FILES += $(LOCAL_PATH)/checkbootreason:root/sbin/checkbootreason
 #PRODUCT_COPY_FILES += \
